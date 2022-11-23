@@ -17,7 +17,7 @@ Recuerda que el éxito no se mide por cuánto tiempo te toma aprender, esa métr
 
 ## Variables y operaciones
 
-### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+### 1️⃣ Responde las siguientes:
 
 - ¿Qué es una variable y para qué sirve?
   Una variable es un espacio en memoria designado a guardar información de diferentes tipos de datos (tipos designados por el lenguaje de programación)
@@ -91,7 +91,7 @@ console.log(savemoney - debt);
 
 ## Funciones
 
-### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+### 1️⃣ Responde las siguientes preguntas:
 
 - ¿Qué es una función?
   Una función es un conjunto de instrucciones que realiza cierta tarea, este conjunto de código es reutilizable, es decir, se puede mandar a llamar las veces que se requiera, generalmente reciben una entrada (parámetros) y otorgan una salida consecuente.
@@ -153,7 +153,7 @@ greeting('Joaquín Ignacio', 'Ossandón Gómez', 'Gh0stRaccoon');
 
 ## Condicionales
 
-### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+### 1️⃣ Responde las siguientes preguntas:
 
 - ¿Qué es un condicional?
   Un condicional ejecuta cierto código dependiendo de una condición o validación.
@@ -348,7 +348,7 @@ while (respuesta != 4) {
 
 ## Listas
 
-### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+### 1️⃣ Responde las siguientes preguntas:
 
 - ¿Qué es un array?
   Un array es una colección o conjunto de elementos, cada uno de ellos se puede llamar haciendo referencia a la posición que ocupe dentro de dicha colección.
