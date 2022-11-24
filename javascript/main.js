@@ -1,16 +1,23 @@
 const menuEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
 const shoppingCart = document.querySelector('.navbar-shopping-cart');
-const menuShoppingCart = document.querySelector('.product-detail');
+const menuShoppingCart = document.querySelector('.order-detail');
 const hamburguerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cardsContainer = document.querySelector('.cards-container');
+const productDetailContainer = document.querySelector('.product-detail');
+const productDetailCloseIcon = document.querySelector('.product-detail-close');
 
 const toggleDesktopMenu = () => {
 	desktopMenu.classList.toggle('inactive');
 };
 
 const toggleMobileMenu = () => {
+	const isProductDetailContainerOpen =
+		!productDetailContainer.classList.contains('inactive');
+	if (isProductDetailContainerOpen) {
+		productDetailContainer.classList.add('inactive');
+	}
 	const isMenuShoppingCartOpen =
 		!menuShoppingCart.classList.contains('inactive');
 	mobileMenu.classList.toggle('inactive');
@@ -19,17 +26,31 @@ const toggleMobileMenu = () => {
 	}
 };
 const toggleShoppingCart = () => {
+	const isProductDetailContainerOpen =
+		!productDetailContainer.classList.contains('inactive');
+	if (isProductDetailContainerOpen) {
+		productDetailContainer.classList.add('inactive');
+	}
 	const isMobileMenuOpen = !mobileMenu.classList.contains('inactive');
-	menuShoppingCart.classList.toggle('inactive');
 	if (isMobileMenuOpen) {
 		mobileMenu.classList.add('inactive');
 	}
+	menuShoppingCart.classList.toggle('inactive');
+};
+
+const openProductDetailAside = () => {
+	productDetailContainer.classList.remove('inactive');
+  menuShoppingCart.classList.add('inactive')
+};
+const closeProductDetailAside = () => {
+	productDetailContainer.classList.add('inactive');
 };
 
 const renderProducts = (productList) => {
 	for (product of productList) {
 		const productCard = document.createElement('div');
 		productCard.classList.add('product-card');
+		productCard.addEventListener('click', openProductDetailAside);
 
 		const productImg = document.createElement('img');
 		productImg.setAttribute('src', product.image);
@@ -61,6 +82,7 @@ const renderProducts = (productList) => {
 	}
 };
 
+productDetailCloseIcon.addEventListener('click', closeProductDetailAside);
 menuEmail.addEventListener('click', toggleDesktopMenu);
 hamburguerMenu.addEventListener('click', toggleMobileMenu);
 shoppingCart.addEventListener('click', toggleShoppingCart);
@@ -73,13 +95,13 @@ productList.push({
 		'https://images.pexels.com/photos/5769387/pexels-photo-5769387.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
 });
 productList.push({
-	name: 'A Car',
+	name: 'Super Nintendo',
 	price: 120,
 	image:
 		'https://images.pexels.com/photos/5769387/pexels-photo-5769387.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
 });
 productList.push({
-	name: 'A Car',
+	name: 'Lanzoprasol',
 	price: 120,
 	image:
 		'https://images.pexels.com/photos/5769387/pexels-photo-5769387.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load',
